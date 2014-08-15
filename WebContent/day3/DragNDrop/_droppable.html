@@ -1,0 +1,42 @@
+<!-- the html is to demonstrate "drag" UI. @author - Mazahir Clipwala. @since Jun 6, 2014 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/black-tie/jquery-ui.css"/> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#draggable').draggable ();
+		$('#droppable').droppable ({
+			drop: handleDropEvent
+		});
+	});
+	
+	function handleDropEvent (event, ui) {
+		var draggable = ui.draggable;
+		alert ('The square with the id "' + draggable.attr('id') + '" has been dropped onto me!');
+	}
+</script>
+<style type="text/css">
+	#draggable { 
+		float: left; 
+		width: 300px; 
+		height: 300px; 
+		background: red;
+	}
+	#droppable { 
+		float: right; 
+		width: 300px; 
+		height: 300px; 
+		border: 1px solid #999; 
+	}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="draggable"></div>
+	<div id="droppable"></div>
+</body>
+</html>

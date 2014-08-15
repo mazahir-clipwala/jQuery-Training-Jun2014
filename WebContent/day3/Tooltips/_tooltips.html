@@ -1,0 +1,65 @@
+<!-- the html is to demonstrate "tooltip" UI. @author - Mazahir Clipwala. @since Jun 6, 2014 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/black-tie/jquery-ui.css"/> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$(document).tooltip ();
+		
+		$('input[name="fname"]').tooltip({ content: "What is your first name..Harry?" });
+		/* $(document).tooltip ({
+			show: {
+				 effect: "slideDown",
+				 delay: 250
+			},
+			hide: {
+				effect: "explode",
+				delay: 250
+			}
+		});  */
+		
+	});
+</script>
+<style>
+	body {
+		font-family: Calibri;
+		font-size: 75%;
+	}
+	#tabs {
+		border: 1px solid black;
+		width: 250px;
+	}
+	
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="tabs">
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="fname" class="names" title="Enter your name Harry"/></td>
+			<tr>
+			<tr>
+				<td>Middle Name:</td>
+				<td><input type="text" name="mname" class="names" title="Enter your Father's name Harry"/></td>
+			<tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" name="lname" class="names" title="Enter your last name Harry"/></td>
+			<tr>
+			<tr>
+				<td>Sex:</td>
+				<td>
+					<input type="radio" checked="checked" name="hsex"/>Male
+					<input type="radio" name="hsex"/>Female
+				</td>
+			<tr>
+		</table>
+	</div>
+</body>
+</html>

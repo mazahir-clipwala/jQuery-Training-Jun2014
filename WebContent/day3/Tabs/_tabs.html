@@ -1,0 +1,116 @@
+<!-- the html is to demonstrate "tabs" UI. @author - Mazahir Clipwala. @since Jun 6, 2014 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/black-tie/jquery-ui.css"/> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* $('#tabs').tabs ().width ('300px');
+		
+		$('#tabs').tabs ( { active: 1});
+		//$('#tabs').tabs ( { disabled: true});
+		//$('#tabs').tabs ( { disabled: [1, 2]});
+		$('#tabs').tabs ( { event: "mouseover" }); */
+		
+		$('#tabs').tabs ( { beforeActivate: function (e, ui) {
+			console.log (ui.newTab);
+			console.log (ui.oldTab);
+			console.log (ui.newPanel);
+			console.log (ui.oldPanel);
+		} });
+		
+	});
+</script>
+<style>
+	body {
+		font-family: Calibri;
+		font-size: 75%;
+	}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="tabs">
+		<ol>
+			<li><a href="#tabbed-1">Harry</a></li>
+			<li><a href="#tabbed-2">James</a></li>
+			<li><a href="#tabbed-3">Lilly</a></li>
+		</ol>
+		
+		<div id="tabbed-1">
+			<table>
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" name="fname" class="names" value="Harry" /></td>
+				<tr>
+				<tr>
+					<td>Middle Name:</td>
+					<td><input type="text" name="mname" class="names"  value="James" /></td>
+				<tr>
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" name="lname" class="names"  value="Potter" /></td>
+				<tr>
+				<tr>
+					<td>Sex:</td>
+					<td>
+						<input type="radio" checked="checked" name="hsex"/>Male
+						<input type="radio" name="hsex"/>Female
+					</td>
+				<tr>
+			</table>
+		</div>
+		<div id="tabbed-2">
+			<table>
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" name="fname" class="names" value="James" /></td>
+				<tr>
+				<tr>
+					<td>Middle Name:</td>
+					<td><input type="text" name="mname" class="names" value="Gryffindor" /></td>
+				<tr>
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" name="lname" class="names" value="Potter" /></td>
+				<tr>
+				<tr>
+					<td>Sex:</td>
+					<td>
+						<input type="radio" checked="checked" name="jsex"/>Male
+						<input type="radio" name="jsex"/>Female
+					</td>
+				<tr>
+			</table>
+
+		</div>
+		
+		<div id="tabbed-3">
+			<table>
+				<tr>
+					<td>First Name:</td>
+					<td><input type="text" name="fname" class="names" value="Lilly" /></td>
+				<tr>
+				<tr>
+					<td>Middle Name:</td>
+					<td><input type="text" name="mname" class="names" value="James" /></td>
+				<tr>
+				<tr>
+					<td>Last Name:</td>
+					<td><input type="text" name="lname" class="names" value="Potter" /></td>
+				<tr>
+				<tr>
+					<td>Sex:</td>
+					<td>
+						<input type="radio" name="lsex"/>Male
+						<input type="radio" checked="checked" name="lsex"/>Female
+					</td>
+				<tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

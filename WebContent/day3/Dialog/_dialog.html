@@ -1,0 +1,75 @@
+<!-- the html is to demonstrate "dialog" UI. @author - Mazahir Clipwala. @since Jun 6, 2014 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/black-tie/jquery-ui.css"/> 
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		var myForm = $("#myForm").dialog ();
+		
+		myForm.dialog ({ title: 'About Harry Potter', draggable: false, resizable: false});
+		/* var okObject = {
+			text: "OK",
+			click: function () {
+				console.log ("I am the OK button");
+			}
+		}
+		var cancelObject = {
+			text: "Cancel",
+			click: function () {
+				console.log ("I am the Cancel button");
+			}
+		}
+		
+		var customButtons = [okObject, cancelObject];
+		myForm.dialog ({buttons: customButtons}); */
+	});
+</script>
+<style>
+	body {
+		font-family: Calibri;
+		font-size: 75%;
+	}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="myForm" title="Harry Potter's Profile">
+		<table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="fname" class="names" id="fname" value="Harry" /></td>
+			<tr>
+			<tr>
+				<td>Middle Name:</td>
+				<td><input type="text" name="mname" class="names" id="mname" value="James" /></td>
+			<tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" name="lname" class="names" id="lname" value="Potter" /></td>
+			<tr>
+			<tr>
+				<td>Full Name:</td>
+				<td><input type="text" name="fullName" class="names" value="Harry James Potter" /></td>
+			<tr>		
+			<tr>
+				<td>Education:</td>
+				<td>
+					<input type="checkbox" checked="checked" class="ed" />Graduate
+					<input type="checkbox" checked="checked" class="ed1"/>Masters
+				</td>
+			<tr>
+			<tr>
+				<td>Sex:</td>
+				<td>
+					<input type="radio" checked="checked" name="sex"/>Male
+					<input type="radio" name="sex"/>Female
+				</td>
+			<tr>
+	</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!-- the html is to demonstrate "show" function. @author - Mazahir Clipwala. @since Jun 5, 2014 -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$('button[name="showEffect"]').on ("click", function (e) {
+			$('div').show();
+		});
+
+		$('button[name="showSlow"]').on ("click", function (e) {
+			$('div').fadeIn (2000);
+			//$('div').show (2000);
+		});
+	});
+</script>
+<style type="text/css">
+	div {
+		width: 200px;
+		height: 100px;
+		border: 1px solid black;
+		font-style: Calibri;
+		font-size: 10px;
+		display: none;
+	}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>First Name</td>
+			<td><input type="text" name="fname" class="names" id="fname" value="       Harry" /></td>
+		<tr>
+		<tr>
+			<td>Middle Name</td>
+			<td><input type="text" name="mname" class="names" id="mname" value="James" /></td>
+		<tr>
+		<tr>
+			<td>Last Name</td>
+			<td><input type="text" name="lname" class="names" id="lname" value="Potter" /></td>
+		<tr>
+		<tr>
+			<td>Full Name</td>
+			<td><input type="text" name="fullName" class="names" value="Harry James Potter" /></td>
+		<tr>		
+		<tr>
+			<td>Education</td>
+			<td>
+				<input type="checkbox" checked="checked" class="ed" />Graduate
+				<input type="checkbox" class="ed1"/>Under-Graduate
+				<input type="checkbox" checked="checked" class="ed1"/>Masters
+			</td>
+		<tr>
+		
+		<tr>
+			<td>Sex</td>
+			<td>
+				<input type="radio" checked="checked" name="sex"/>Male
+				<input type="radio" name="sex"/>Female
+				<input type="radio" name="sex"/>Others
+			</td>
+		<tr>
+		<tr>
+			<td><button name="showEffect">Show Effect</button></td>
+			<td><button name="showSlow">Show Slow Effect</button></td>
+		<tr>
+	</table>
+	<div><h1>I am a DIV element</h1></div>
+</body>
+</html>
